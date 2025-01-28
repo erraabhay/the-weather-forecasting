@@ -37,12 +37,12 @@ export function getUTCDatetime() {
     hour: '2-digit',
     minute: '2-digit',
     hourCycle: 'h23',
-    timeZone: 'ITC',
+    timeZone: 'IST',
   });
 
   const isoDateString = new Date().toISOString();
-  const utcDate = isoDateString.split('T')[0].concat(' ', itcTime);
-  return utcDate;
+  const utcDate = isoDateString.split('T')[0].concat(' ', istTime);
+  return istDate;
 }
 
 export function getUTCTime() {
@@ -51,8 +51,8 @@ export function getUTCTime() {
     minute: '2-digit',
     second: '2-digit',
     hourCycle: 'h23',
-    timeZone: 'ITC',
+    timeZone: 'IST',
   });
 
-  return utcTime;
+  return istTime;
 }
